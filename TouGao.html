@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站投稿页面</title>
+	<link rel="stylesheet" href="./css/TouGao.css" />
+	<script src="js/TouGao.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>网站投稿</h1>
+        <div class="instructions">
+            <p>感谢您有兴趣向我们投稿您的网站。请填写以下表格，确保提供的信息准确无误。我们会在收到您的投稿后尽快审核。</p>
+        </div>
+        <form action="/submit-website" method="post" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="websiteName">网站名称：</label>
+				<input type="text" id="websiteName" name="websiteName" required>
+			</div>
+            <div class="form-group">
+                <label for="websiteUrl">网站网址：</label>
+                <input type="url" id="websiteUrl" name="websiteUrl" required>
+            </div>
+            <div class="form-group website-icon">
+                <label for="websiteIcon">网站图标：</label>
+                <input type="file" id="websiteIcon" name="websiteIcon" accept="image/*" required>
+                <img id="previewIcon" src="#" alt="网站图标预览" style="display: none;">
+            </div>
+            <div class="form-group">
+                <label for="description">网站描述：</label>
+                <textarea id="description" name="description" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">提交网站</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>便签留言板</title>
+    <link rel="stylesheet" href="./css/MessageBoard.css">
+</head>
+<body>
+    <div id="note-container"></div>
+    <div id="note-form">
+        <textarea id="note-content" placeholder="在这里输入便签内容..."></textarea>
+        <button id="add-note">添加便签</button>
+    </div>
+    <div id="settings">
+        <div class="setting-row">
+            <label>便签颜色:</label>
+            <input type="color" id="note-color" value="#FFD1DC">
+            <label>文字颜色:</label>
+            <input type="color" id="text-color" value="#FFA500">
+            <label>形状:</label>
+            <select id="note-shape">
+                <option value="rounded">圆角</option>
+                <option value="square">正方形</option>
+                <option value="rectangle">长方形</option>
+                <option value="hexagon">六边形</option>
+            </select>
+        </div>
+    </div>
+    <script src="./js/MessageBoard.js"></script>
+</body>
+</html>
