@@ -52,6 +52,7 @@ body {
 	/* 鼠标悬停时显示为指针，提示用户该元素可点击 */
 	font-size: 24px;
 	/* 字体大小为24px */
+	z-index: 100; /* 确保在其他元素上方 */
 }
 
 .icon-sun,
@@ -257,17 +258,17 @@ body.dark-mode .nav-item i {
 #imgcon:hover {
 	background: linear-gradient(to bottom, #9CBCE3,#E1DBE9);
 	/* 垂直渐变 */
+	transition: all 0.3s ease;
 }
 /* 给图片设置一个固定的大小 */
 #imgcon img{
 	width: 16px;
 	height: 16px;
-	
+	transition: all 0.3s ease;
 }
 #imgcon img:hover{
 	width: 32px;
 	height: 32px;
-	
 }
 
 #imgcon{
@@ -282,6 +283,7 @@ body.dark-mode .nav-item i {
 	/* 外边距 */
 	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
 	/* 添加阴影效果 */
+	transition: all 0.3s ease;
 }
 
 #imgcon a{
@@ -317,4 +319,75 @@ body.dark-mode .nav-item i {
 	 margin: 0 10px;
 	color: #fff;
 	text-decoration: none;
+}
+
+/* 响应式设计 - 平板设备 (768px 以下) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+    }
+    .main-content {
+        margin-left: 80px;
+    }
+    .nav-text {
+        display: none;
+    }
+    #imgcon {
+        width: 45%;
+        margin: 10px;
+        height: auto;
+        padding: 10px 0;
+    }
+    .con1, .con2, .con3, .con4, .con5, .con6, .con7, .con8, .con9 {
+        height: auto;
+        padding: 10px 0;
+    }
+    .foot {
+        flex-direction: column;
+        padding-top: 20px;
+        height: auto;
+        padding: 20px;
+    }
+    .foot > div {
+        margin: 5px 0;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* 响应式设计 - 手机设备 (480px 以下) */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 60px;
+    }
+    .main-content {
+        margin-left: 60px;
+        padding: 10px;
+    }
+    #imgcon {
+        width: 90%;
+        margin: 8px auto;
+        height: auto;
+        padding: 15px 0;
+    }
+    .top {
+        height: auto;
+        padding: 10px 0;
+    }
+    h1 {
+        font-size: 1.3em;
+        text-align: center;
+    }
+    #imgcon a h3 {
+        font-size: 1em;
+    }
+    #imgcon a p {
+        font-size: 0.8em;
+    }
+    .theme-toggle {
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+    }
 }
