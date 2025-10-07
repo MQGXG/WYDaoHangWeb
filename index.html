@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>网站导航</title>
+		<!-- 引入外部CSS文件 -->
+		<link rel="stylesheet" href="./css/index.css">
+		<link rel="stylesheet" href="./css/clock.css" />
+		<!-- 引入外部JavaScript文件 -->
+		<script src="./js/clock.js"></script>
+		<script src="./js/index.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 主题切换按钮，右上角 -->
+			<div id="theme-toggle" class="theme-toggle">
+				<!-- 白昼模式图标，默认显示 -->
+				<i class="icon-sun" id="sun-icon"><img src="./img/Sunlogo.ico" alt="" /></i>
+				<!-- 黑夜模式图标，默认隐藏 -->
+				<i class="icon-moon" id="moon-icon" style="display: none;"><img src="./img/Moonlogo.ico" alt="" /></i>
+			</div>
+
+			<!-- 左侧可伸缩导航栏 -->
+			<div id="sidebar" class="sidebar">
+				<div class="sidebar-header">
+					<!-- 导航栏的logo区域 -->
+					<div class="logo">
+						<h2>墨尘导航</h2><img src="./img/daohlogo.ico" alt="" />
+					</div>
+				</div>
+				<ul class="nav-list">
+					<!-- 导航菜单项 -->
+					<li class="nav-item">
+						<a href="#top">
+							<div class="nav-link-container">
+								<i class="icon-home"><img src="./img/首页.ico" alt="" /></i> <!-- 首页图标 -->
+								<span class="nav-text" >网站首页</span> <!-- 首页文字 -->
+							</div>	
+						</a>
+						
+					</li>
+					<li class="nav-item">
+						<a href="#con1">
+							<div class="nav-link-container">
+								<i class="icon-info"><img src="./img/线性图书.ico" alt="" /></i> <!-- 图书图标 -->
+								<span class="nav-text">图书推荐</span> <!-- 图书文字 -->
+							</div>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#con2">
+							<div class="nav-link-container">
+								<i class="icon-info"><img src="./img/音乐.ico" alt="" /></i> <!-- 图书图标 -->
+								<span class="nav-text">音乐站点</span> <!-- 图书文字 -->
+							</div>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#con3">
+							<div class="nav-link-container">
+								<i class="icon-info"><img src="./img/专题_影视.ico" alt="" /></i> <!-- 图书图标 -->
+								<span class="nav-text">影视天地</span> <!-- 图书文字 -->
+							</div>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#con4">
+							<div class="nav-link-container">
+								<i class="icon-info"><img src="./img/icon_动漫模型.ico" alt="" /></i> <!-- 图书图标 -->
+								<span class="nav-text">动漫次元</span> <!-- 图书文字 -->
+							</div>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#con5">
+							<div class="nav-link-container">
+								<i class="icon-info"><img src="./img/办公包.ico" alt="" /></i> <!-- 图书图标 -->
+								<span class="nav-text">办公资源</span> <!-- 图书文字 -->
+							</div>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#con6">
+							<div class="nav-link-container">
+								<i class="icon-info"><img src="./img/icon_supplies2.ico" alt="" /></i> <!-- 图书图标 -->
+								<span class="nav-text">工具盒子</span> <!-- 图书文字 -->
+							</div>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#con7">
+							<div class="nav-link-container">
+								<i class="icon-info"><img src="./img/电脑下载.ico" alt="" /></i> <!-- 图书图标 -->
+								<span class="nav-text">软件下载</span> <!-- 图书文字 -->
+							</div>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#con8">
+							<div class="nav-link-container">
+								<i class="icon-info"><img src="./img/编程.ico" alt="" /></i> <!-- 图书图标 -->
+								<span class="nav-text">电脑编程</span> <!-- 图书文字 -->
+							</div>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#con9">
+							<div class="nav-link-container">
+								<i class="icon-contact"><img src="./img/安卓壁纸.ico" alt="" /></i> <!-- 联系图标 -->
+								<span class="nav-text"><a href="#con9">壁纸图库</a></span> <!-- 联系文字 -->
+							</div>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="TouGao.html">
+							<div class="nav-link-container">
+								<i class="icon-contact"><img src="./img/投稿.ico" alt="" /></i> <!--投稿图标 -->
+								<span class="nav-text">欢迎投稿</span> <!-- 投稿文字 -->
+							</div>
+						</a>	
+					</li>
+					<li class="nav-item">
+						<a href="MessageBoard.html">
+							<div class="nav-link-container">
+								<i class="icon-contact"><img src="./img/信封联系人.ico" alt="" /></i> <!-- 联系图标 -->
+								<span class="nav-text">留言板</span> <!-- 联系文字 -->
+							</div>
+						</a>	
+					</li>
+				</ul>
+			</div>
+
+			<!-- 主内容区域 -->
+			<div class="main-content">
+				<h1>欢迎来到我的网站</h1>
+				<div class="top" id="top">
+					<!-- 时钟 -->
+					<div class="ciock">
+						<div class="digital-clock">
+							<i class="fas fa-ellipsis-v uil uil-ellipsis-v dot-menu-btn" style="color:#fff"
+								id="active-menu"></i>
+							<ul class="dot-menu" id="active-menu">
+								<li class="menu-item" id="active-menu">
+									<span class="clock-format-text" id="active-menu">24-Hour Format</span>
+									<div class="format-switch-btn" id="active-menu" date-format="12"></div>
+								</li>
+							</ul>
+							<div class="time">
+								<span class="hours">00</span>
+								<span class="dots">:</span>
+								<span class="minutes">00</span>
+								<div class="right-side">
+									<span class="period">AM/PM</span>
+									<span class="seconds">00</span>
+								</div>
+							</div>
+							<div class="calender">
+								<span class="month-name">Month</span>,
+								<span class="day-name">Day</span>
+								<span class="day-num">00</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 图书推荐 -->
+				<div class="con1" id="con1">
+					<div id="imgcon">
+						<a href="https://www.iyd.wang/">
+							<h3><img src="./icon/read1.png" alt="爱悦读" />爱悦读</h3>
+							<p>epub kindle电子书免费下载</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://ibooks.org.cn/">
+							<h3><img src="./icon/read2.ico" alt="" />电子书</h3>
+							<p>epub kindle电子书免费下载</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.jiumodiary.com/">
+							<h3><img src="./icon/read3.ico" alt="" />鸠摩搜书</h3>
+							<p>一个可搜寻图书的站点</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://weread.qq.com/">
+							<h3><img src="./icon/read4.ico" alt="" />微信读书</h3>
+							<p>最简洁干净的图书库</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.shuge.org/">
+							<h3><img src="./icon/read5.ico" alt="" />书格</h3>
+							<p>有品格的数字图书馆</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://shu.ziyuandi.cn/">
+							<h3><img src="./icon/read6.ico" alt="" />资源帝</h3>
+							<p>全网最好的电子书导航</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="http://www.freexiaoshuo.com/">
+							<h3><img src="./icon/read7.ico" alt="" />免费小说</h3>
+							<p>最全的小说网站</p>
+						</a>
+					</div>
+				</div>
+				<!-- 音乐站点 -->
+				<div class="con2" id="con2">
+					<div id="imgcon">
+						<a href="https://tools.liumingye.cn/">
+							<h3><img src="./icon/music1.png" alt="" />免费的MP3</h3>
+							<p>免费听音乐</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="http://www.22a5.com/">
+							<h3><img src="./icon/music2.png" alt="" />爱玩音乐</h3>
+							<p>免费听音乐</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.xmwav.com/">
+							<h3><img src="./icon/music3.png" alt="" />熊猫音乐</h3>
+							<p>免费无损下载音乐</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.gequbao.com/">
+							<h3><img src="./icon/music4.png" alt="" />歌曲宝</h3>
+							<p>免费无损下载音乐</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.musicenc.com/">
+							<h3><img src="./icon/music5.jpg" alt="" />musicenc</h3>
+							<p>音乐歌词下载</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://music.163.com/">
+							<h3><img src="./icon/music6.jpg" alt="" />网易云音乐</h3>
+							<p>音乐是一种救赎</p>
+						</a>
+					</div>
+				</div>
+				<!-- 影视天地 -->
+				<div class="con3" id="con3">
+					<div id="imgcon">
+						<a href="https://soupian.pro/">
+							<h3><img src="./icon/movie1.png" alt="" />搜片网</h3>
+							<p>影视聚合搜索神器</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://tv.cctv.com/">
+							<h3><img src="./icon/movie2.png" alt="" />央视直播</h3>
+							<p>央视各频道在线直播</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.novipnoad.net/">
+							<h3><img src="./icon/movie3.png" alt="" />NO视频</h3>
+							<p>在线观看电影电视剧</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://xn--p3tv7h.com/">
+							<h3><img src="./icon/movie4.png" alt="" />影搜</h3>
+							<p>影视全网搜索</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://ddys.pro/">
+							<h3><img src="./icon/movie5.png" alt="" />低端影视</h3>
+							<p>在线高清免费影视网站</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.dy2018.com/">
+							<h3><img src="./icon/movie6.png" alt="" />电影天堂</h3>
+							<p>提供最新影视下载</p>
+						</a>
+					</div>
+				</div>
+				<!-- 动漫次元 -->
+				<div class="con4" id="con4">
+					<div id="imgcon">
+						<a href="https://www.agedm.org/">
+							<h3><img src="./icon/anime1.ico" alt="" />AGE动漫</h3>
+							<p>可在线有客户端</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://yhdm.one/">
+							<h3><img src="./icon/anime2.ico" alt="" />樱花动漫</h3>
+							<p>可在线观看</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://yuc.wiki/">
+							<h3><img src="./icon/anime3.ico" alt="" />Yuc's Anime List</h3>
+							<p>动漫新番表</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.missevan.com/">
+							<h3><img src="./icon/anime4.ico" alt="" />猫耳-FM</h3>
+							<p>倾听来自二次元的声音</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://ddys.pro/">
+							<h3><img src="./icon/anime5.ico" alt="" />子夜动漫</h3>
+							<p>可在线观看高清动漫</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://bangumi.tv/">
+							<h3><img src="./icon/anime6.ico" alt="" />Bangumi番组计划</h3>
+							<p>大千世界，志趣相投</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.colamanga.com/">
+							<h3><img src="./icon/anime7.ico" alt="" />COCOMANGA</h3>
+							<p>国产漫画资源</p>
+						</a>
+					</div>
+				</div>
+				<!-- 办公资源 -->
+				<div class="con5" id="con5">
+					<div id="imgcon">
+						<a href="https://www.ilovepdf.com/">
+							<h3><img src="./icon/office1.png" alt="" />iLovePDF</h3>
+							<p>各种PDF工具在线免费使用</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://compress-online.com/">
+							<h3><img src="./icon/office2.png" alt="" />文件压缩器</h3>
+							<p>图片、视频、文档统统可免费压缩</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://yuc.wiki/">
+							<h3><img src="./icon/office3.png" alt="" />DeepL翻译</h3>
+							<p>一个翻译挺强的工具</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.fonts.net.cn/">
+							<h3><img src="./icon/office4.png" alt="" />字体天下</h3>
+							<p>各种有趣好看的字体</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.iconfont.cn/">
+							<h3><img src="./icon/office5.png" alt="" />Iconfont</h3>
+							<p>阿里云的免费矢量图标库</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.alltoall.net/">
+							<h3><img src="./icon/office6.png" alt="" />All to All转换</h3>
+							<p>视频，音频，文档在线转换</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://cn.unithelper.com/">
+							<h3><img src="./icon/office7.png" alt="" />UNITheler</h3>
+							<p>在线单位换算器</p>
+						</a>
+					</div>
+				</div>
+				<!-- 工具盒子 -->
+				<div class="con6" id="con6">
+					<div id="imgcon">
+						<a href="https://chrome.zzzmh.cn/">
+							<h3><img src="./icon/tool1.png" alt="" />极简插件</h3>
+							<p>Chrome插件下载</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.iamwawa.cn/">
+							<h3><img src="./icon/tool2.png" alt="" />蛙蛙工具</h3>
+							<p>文本处理工具</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.qijishow.com/">
+							<h3><img src="./icon/tool3.png" alt="" />奇迹秀工具箱</h3>
+							<p>设计师的宝藏箱</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://aiqicha.baidu.com/">
+							<h3><img src="./icon/tool4.png" alt="" />爱企查</h3>
+							<p>专业查企业</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://tool.lu/">
+							<h3><img src="./icon/tool5.png" alt="" />程序员工具箱</h3>
+							<p>各种使用有趣的工具</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.piskelapp.com/">
+							<h3><img src="./icon/tool6.png" alt="" />Piskel</h3>
+							<p>免费可手绘GIF像素画</p>
+						</a>
+					</div>
+				</div>
+				<!-- 软件下载 -->
+				<div class="con7" id="con7">
+					<div id="imgcon">
+						<a href="https://www.iplaysoft.com/">
+							<h3><img src="./icon/software1.png" alt="" />异次元</h3>
+							<p>奇妙的软件</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://lizhi.shop/">
+							<h3><img src="./icon/software2.png" alt="" />数码荔枝</h3>
+							<p>新鲜优秀的正版软件</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.ghxi.com/">
+							<h3><img src="./icon/software3.png" alt="" />果核剥壳</h3>
+							<p>修改版软件分享</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.dayanzai.me/">
+							<h3><img src="./icon/software4.png" alt="" />大眼仔旭</h3>
+							<p>汉化软件分享</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.sumatrapdfreader.org/">
+							<h3><img src="./icon/software5.png" alt="" />Sumatra PDF</h3>
+							<p>最轻量的PDF阅读器</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.apprcn.com/">
+							<h3><img src="./icon/software6.png" alt="" />反斗软件</h3>
+							<p>新奇免费的软件分享</p>
+						</a>
+					</div>
+				</div>
+				<!-- 电脑编程 -->
+				<div class="con8" id="con8">
+					<div id="imgcon">
+						<a href="https://www.runoob.com/">
+							<h3><img src="./icon/prog1.ico" alt="" />菜鸟教程</h3>
+							<p>超级全面的IT编程教程</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.w3school.com.cn/">
+							<h3><img src="./icon/prog2.ico" alt="" />W3school在线教程</h3>
+							<p>Web技术教程</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://liaoxuefeng.com/">
+							<h3><img src="./icon/prog3.ico" alt="" />廖雪峰的官方网站</h3>
+							<p>免费编程教程</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://wangchujiang.com/">
+							<h3><img src="./icon/prog4.ico" alt="" />Quick Reference</h3>
+							<p>开发人员编程速查手册</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.freecodecamp.org/">
+							<h3><img src="./icon/prog5.ico" alt="" />freecodecamp</h3>
+							<p>免费编程学习网站</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="cn.linux.vbird.or">
+							<h3><img src="./icon/software6.png" alt="" />鸟哥的Linux私房菜</h3>
+							<p>最佳Linux入门教程</p>
+						</a>
+					</div>
+				</div>
+				<!-- 壁纸库 -->
+				<div class="con9" id="con9">
+					<div id="imgcon">
+						<a href="https://haowallpaper.com/">
+							<h3><img src="./icon/wallpaper1.ico" alt="" />哲风壁纸</h3>
+							<p>免费4K高清壁纸</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://bz.zzzmh.cn/">
+							<h3><img src="./icon/wallpaper2.ico" alt="" />极简壁纸</h3>
+							<p>免费海量壁纸极速</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://liaoxuefeng.com/">
+							<h3><img src="./icon/wallpaper3.ico" alt="" />WallpaperCave</h3>
+							<p>类型丰富有趣</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://anime-pictures.net/">
+							<h3><img src="./icon/prog4.ico" alt="" />动漫图片和壁纸</h3>
+							<p>有趣好看的图片值得拥有</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://www.freecodecamp.org/">
+							<h3><img src="./icon/wallpaper5.ico" alt="" />freecodecamp</h3>
+							<p>免费编程学习网站</p>
+						</a>
+					</div>
+					<div id="imgcon">
+						<a href="https://wallspic.com/">
+							<h3><img src="./icon/wallpaper6.ico" alt="" />wallspic</h3>
+							<p>一个最简洁明了的壁纸库</p>
+						</a>
+					</div>
+				</div>
+				<div class="foot">
+					<div>技术支持：阿尘的个人工作室</div>
+					<div>关于我：欢迎访问我的<a href="MY.html">博客</a></div>
+					<div>联系邮箱：xinchengx488@163.com</div>
+					<div>版权所有 &copy; 阿尘的个人导航网站</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
