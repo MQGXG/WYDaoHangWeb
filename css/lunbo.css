@@ -1,0 +1,104 @@
+/* 轮播图外部容器样式 */
+.carousel {
+  position: relative; /* 设置相对定位，为内部绝对定位元素提供参照 */
+  max-width: 400px; /* 轮播图最大宽度为 600px */
+ /* margin: auto; */ /* 将轮播图水平居中 */
+  overflow: hidden; /* 隐藏超出容器的部分，确保只显示当前一张图片 */
+  /* margin-left: 0; */
+  margin-top: 30px;
+  border: 10px black solid;
+  border-radius: 15px;
+}
+
+/* 轮播图内容容器样式 */
+.carousel-container {
+  display: flex; /* 使用 flex 布局，使图片横向排列 */
+  transition: transform 0.5s ease; /* 添加平滑过渡效果，用于切换图片时的动画 */
+  
+}
+
+/* 单个轮播项的样式 */
+.carousel-item {
+  min-width: 100%; /* 每个轮播项的宽度占据容器的 100% */
+  max-height: 300px; /* 限制轮播项的最大高度为 300px */
+  overflow: hidden; /* 如果内容超出高度限制，隐藏超出部分 */
+}
+
+/* 图片样式 */
+.carousel-item img {
+  width: 100%; /* 图片宽度占据整个轮播项 */
+  display: block; /* 将图片显示为块级元素，去掉底部空白 */
+}
+
+/* 左右导航按钮的样式 */
+.prev, .next {
+  cursor: pointer; /* 鼠标悬停时显示手型光标 */
+  position: absolute; /* 绝对定位，使按钮可以悬浮在轮播图内部 */
+  top: 50%; /* 按钮垂直居中 */
+  transform: translateY(-50%); /* 通过平移将按钮精确对齐垂直中心 */
+  color: white; /* 按钮文字颜色为白色 */
+  font-size: 24px; /* 按钮文字大小 */
+  background-color: rgba(0, 0, 0, 0.5); /* 按钮背景为半透明的黑色 */
+  padding: 10px; /* 内边距为 10px，使按钮更易点击 */
+}
+
+/* 右侧按钮样式 */
+.next {
+  right: 0; /* 将右侧按钮固定在容器的右侧 */
+}
+
+
+ /* 分页器 */
+/* 容器样式 */
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* 平滑过渡效果 */
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+/* 分页指示器容器 */
+.indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* 分页圆点样式 */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bbb;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* 激活的分页圆点 */
+.dot.active {
+  background-color: #333;
+}
+
+/* 按钮样式 */
+button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* button.prev {
+  left: 10px;
+} */
+
+button.next {
+  right: 10px;
+}

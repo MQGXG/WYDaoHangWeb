@@ -1,0 +1,94 @@
+body {
+	background-image: url(../images/TG2.png);
+	background-size: cover;
+}
+
+#player-container {
+	width: 500px;
+	height: 500px;
+	margin: auto;
+	align-items: center;
+	/* 垂直居中对齐 */
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 10px;
+	border: 1px solid;
+}
+
+#player-container div {
+	border-radius: 10px;
+}
+
+#music-lists {
+	width: 500px;
+	height: 100px;
+	border: 1px solid;
+}
+
+#music-container {
+	width: 500px;
+	height: 80px;
+	border: 1px solid;
+	overflow: auto;
+	/* 当内容超出时显示滚动条 */
+}
+
+#controls {
+	width: 500px;
+	height: 80px;
+	border: 1px solid;
+}
+
+#player {
+	width: 500px;
+	height: 55px;
+	/* border: 1px solid; */
+	border-radius: 50%;
+}
+
+#audio-player {
+	width: 500px;
+}
+
+#music-list-select {
+	width: 180px;
+	height: 30px;
+	text-align: center;
+	color: orange;
+	border-radius: 5px;
+}
+
+#new-list-name {
+	width: 300px;
+	height: 30px;
+	
+	border-radius: 5px;
+}
+
+#player-container,#player,#audio-player,#music-list-select,#new-list-name {
+	background-color: rgba(213, 221, 255, 0.5);
+	/* 白色背景，50% 透明度 */
+}
+#controls button img ,
+#music-lists button img {
+	width: 40px;
+	height: 40px;
+}
+
+/* 设置按钮的基本样式 */
+#controls button,
+#music-lists button {
+	padding: 10px 20px;
+	/* 按钮的内边距 */
+	margin: 15px;
+	/* 按钮的外边距 */
+	cursor: pointer;
+	/* 鼠标悬停时显示手形光标 */
+	background: none;
+	/* 移除默认背景 */
+	border: none;
+	/* 移除边框 */
+	outline: none;
+	/* 移除轮廓线 */
+
+}

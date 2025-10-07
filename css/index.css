@@ -1,0 +1,320 @@
+/* 样式初始化 */
+* {
+	margin: 0;
+	/* 清除所有元素的外边距 */
+	padding: 0;
+	/* 清除所有元素的内边距 */
+	box-sizing: border-box;
+	/* 设置盒模型为border-box，确保padding和border不会影响元素的宽度和高度 */
+}
+
+body {
+	font-family: Arial, sans-serif;
+	/* 设置页面的字体为Arial，sans-serif作为备选字体 */
+	background-color: var(--bg-color);
+	/* 背景颜色使用CSS变量 --bg-color */
+	color: var(--text-color);
+	/* 文本颜色使用CSS变量 --text-color */
+	transition: all 0.3s ease;
+	/* 设置页面所有属性的过渡效果，持续时间为0.3秒，使用平滑的过渡效果 */
+}
+
+#app {
+	display: flex;
+	/* 设置#app元素为flex布局 */
+}
+
+/* 主题色变量：定义不同主题下的颜色 */
+:root {
+	--bg-color: #FFEBCD;
+	/* 默认背景色为白色 */
+	--text-color: #333333;
+	/* 默认文本颜色为深灰色 */
+	--sidebar-bg: #2c3e50;
+	/* 默认左侧导航栏背景色 */
+	--sidebar-text: #ecf0f1;
+	/* 默认左侧导航栏文本颜色 */
+	--sun-color: #f39c12;
+	/* 默认太阳图标颜色 */
+	--moon-color: #34495e;
+	/* 默认月亮图标颜色 */
+}
+
+/* 主题切换按钮样式 */
+.theme-toggle {
+	position: fixed;
+	/* 将按钮固定在页面上 */
+	top: 20px;
+	/* 距离页面顶部20px */
+	right: 20px;
+	/* 距离页面右侧20px */
+	cursor: pointer;
+	/* 鼠标悬停时显示为指针，提示用户该元素可点击 */
+	font-size: 24px;
+	/* 字体大小为24px */
+}
+
+.icon-sun,
+.icon-moon {
+	font-size: 24px;
+	/* 图标字体大小为24px */
+	color: var(--sun-color);
+	/* 默认图标颜色为太阳颜色 --sun-color */
+}
+
+/* 左侧导航栏样式 */
+.sidebar {
+	width: 250px;
+	/* 设置左侧导航栏宽度为250px */
+	background-color: var(--sidebar-bg);
+	/* 背景颜色为变量 --sidebar-bg */
+	height: 100vh;
+	/* 高度为100vh（视口高度的100%） */
+	padding-top: 20px;
+	/* 设置顶部内边距为20px */
+	transition: width 0.3s ease;
+	/* 设置宽度变化时的过渡效果，持续时间为0.3秒，使用平滑过渡 */
+	display: flex;
+	/* 设置为flex布局 */
+	flex-direction: column;
+	/* 设置子元素垂直排列 */
+	position: fixed;
+	/* 固定定位 */
+	overflow-y: auto; 
+	/* 如果内容过多，允许垂直滚动 */
+}
+/* 当侧边栏收起时，宽度为100px */
+/* .sidebar.collapsed {
+	width: 100px;
+	
+} */
+
+/* 左侧导航栏头部样式 */
+.sidebar-header {
+	padding: 20px;
+	/* 内边距为20px */
+	text-align: center;
+	/* 文本居中 */
+	color: var(--sidebar-text);
+	/* 文字颜色为 --sidebar-text */
+}
+
+/* 导航栏的列表样式 */
+.nav-list {
+	list-style: none;
+	/* 去除列表项的默认样式 */
+	padding: 0;
+	/* 去除内边距 */
+}
+
+/* 导航栏项的样式 */
+.nav-item {
+	padding: 15px;
+	/* 每个导航项的内边距为15px */
+	display: flex;
+	/* 使用flex布局 */
+	align-items: center;
+	/* 垂直居中 */
+	color: var(--sidebar-text);
+	/* 文字颜色为 --sidebar-text */
+	cursor: pointer;
+	/* 鼠标悬停时显示为指针 */
+	transition: background-color 0.3s;
+	/* 背景颜色的过渡效果，持续时间为0.3秒 */
+}
+
+.nav-item:hover {
+	background-color: #34495e;
+	/* 鼠标悬停时，背景颜色变为深蓝色 */
+}
+
+.nav-item .nav-text {
+	margin-left: 10px;
+	/* 导航项文字与图标之间的间距为10px */
+}
+
+.nav-item i {
+	font-size: 20px;
+	/* 图标字体大小为20px */
+}
+.nav-link-container {
+    display: flex; /* 使用flex布局 */
+    align-items: center; /* 垂直居中对齐 */
+}
+
+.icon-contact img {
+    vertical-align: middle; /* 设置图片垂直居中对齐 */
+}
+
+
+/* 主内容区域样式 */
+.main-content {
+	padding: 20px;
+	/* 设置内边距为20px */
+	flex-grow: 1;
+	/* 允许主内容区域根据剩余空间伸展 */
+	overflow-y: auto;
+	/* 内容过多时允许垂直滚动 */
+	margin-left: 250px; 
+	/* 与导航栏宽度相同，避免内容被导航栏遮挡 */
+}
+
+/* 黑夜模式样式 */
+body.dark-mode {
+	--bg-color: #2c3e50;
+	/* 黑夜模式下背景色为深蓝色 */
+	--text-color: #ecf0f1;
+	/* 黑夜模式下文本颜色为浅灰色 */
+	--sidebar-bg: #34495e;
+	/* 黑夜模式下左侧导航栏背景色为更深的蓝色 */
+	--sidebar-text: #ecf0f1;
+	/* 黑夜模式下导航栏文本颜色为浅灰色 */
+}
+
+body.dark-mode .theme-toggle {
+	color: var(--moon-color);
+	/* 黑夜模式下主题切换按钮颜色为 --moon-color（深灰色） */
+}
+
+body.dark-mode .nav-item {
+	color: var(--sidebar-text);
+	/* 黑夜模式下导航项文本颜色为 --sidebar-text（浅灰色） */
+}
+
+body.dark-mode .nav-item:hover {
+	background-color: #1abc9c;
+	/* 黑夜模式下，鼠标悬停时导航项背景色为绿松石色 */
+}
+
+body.dark-mode .nav-item i {
+	color: #ecf0f1;
+	/* 黑夜模式下，导航项图标颜色为浅灰色 */
+}
+
+.top {
+	width: 100%;
+	height: 200px;
+	/* background-color: #C0C0C0; */
+	background: linear-gradient(45deg, #a9adff, #5c89cc, #aaaaff);
+	margin-top: 10px;
+	border-radius: 10px;
+}
+
+.con1,
+.con2,.con3,.con4,.con5,.con6,.con7,.con8,.con9 {
+	margin-top: 15px;
+	border-radius: 10px;
+	display: flex;
+	flex-wrap: wrap;
+}
+/* 每个导航区域的宽度大小 */
+.con1 {
+	width: 100%;
+	height: 350px;
+	background-color: lightslategrey;
+}
+.con2 {
+	width: 100%;
+	height: 350px;
+	background-color: lightslategrey;
+}
+.con3 {
+	width: 100%;
+	height: 350px;
+	background-color: lightslategrey;
+}
+.con4 {
+	width: 100%;
+	height: 350px;
+	background-color: lightslategrey;
+}
+.con5 {
+	width: 100%;
+	height: 350px;
+	background-color: lightslategrey;
+}
+.con6 {
+	width: 100%;
+	height: 350px;
+	background-color: lightslategrey;
+}
+.con7 {
+	width: 100%;
+	height: 350px;
+	background-color: lightslategrey;
+}
+.con8 {
+	width: 100%;
+	height: 350px;
+	background-color: lightslategrey;
+}
+.con9 {
+	width: 100%;
+	height: 350px;
+	background-color: lightslategrey;
+}
+/* 鼠标放于导航块上出现变色效果 */
+#imgcon:hover {
+	background: linear-gradient(to bottom, #9CBCE3,#E1DBE9);
+	/* 垂直渐变 */
+}
+/* 给图片设置一个固定的大小 */
+#imgcon img{
+	width: 16px;
+	height: 16px;
+	
+}
+#imgcon img:hover{
+	width: 32px;
+	height: 32px;
+	
+}
+
+#imgcon{
+	text-align: center;
+	width: 15%;
+	height: 100px;
+	border: 1px blanchedalmond solid;
+	border-radius: 20px;
+	background-color: #f0f0f0;
+	/* 灰色背景 */
+	margin: 30px;
+	/* 外边距 */
+	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+	/* 添加阴影效果 */
+}
+
+#imgcon a{
+	color: #2c3e50;
+	text-decoration: none;
+}
+#imgcon a h3{
+	margin: 10px;
+}
+#imgcon a p{
+	margin-top: 15px;	
+}
+
+.nav-item a{
+	color: #fff;
+	text-decoration: none;
+}
+.foot{
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	height: 150px;
+	/* background: linear-gradient(45deg, #a9adff, #5c89cc, #aaaaff); */
+	margin-top: 10px;
+	border-radius: 10px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding-top: 60px;
+
+}
+.foot a{
+	 margin: 0 10px;
+	color: #fff;
+	text-decoration: none;
+}
